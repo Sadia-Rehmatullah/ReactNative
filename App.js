@@ -1,20 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+//import libraries to create components
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Hello World!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+import React from "react";
+import {View, Text, StyleSheet} from "react-native";
+
+//create a component that return some jsx / simple function
+import LittleLemonHeader from "./Components/LittleLemonHeader";
+import LittleLEmonFooter from "./Components/LittleLemonFooter";
+export default function App()
+{
+   return (
+<>
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: '#495E57',
+        }}>
+        <LittleLemonHeader />
+      </View>
+      <View style={{ backgroundColor: '#495E57' }}>
+        <LittleLEmonFooter />
+      </View>
+    </>
+   );      
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+
+//create a stylesheet to style the component
+
+const Styles = StyleSheet.create({
+  textStyle:{ 
+  color: "red",
   },
 });
+
